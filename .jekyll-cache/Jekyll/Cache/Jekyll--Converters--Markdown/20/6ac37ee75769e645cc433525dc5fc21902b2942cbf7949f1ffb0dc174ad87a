@@ -1,0 +1,67 @@
+I"�<h3 id="what-is-it">What is it?</h3>
+<p>NSLookup is a tool used to obtain domain names, IP addresses, and more. It stands for Name Server Look Up.</p>
+
+<h3 id="how-does-it-work">How does it work?</h3>
+<p>Let’s say I want to find the IP address of ableton.com. I run the following command below:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nslookup ableton.com
+</code></pre></div></div>
+
+<p>Under the hood, NSLookup asks a DNS server for the IP address of ableton.com.
+The DNS server then talks to other servers, finds the answer, and provides the answer back to NSLookup.</p>
+
+<h3 id="an-example">An Example</h3>
+<p>Let’s say I want to find the IP address for ableton.com. Open up your Terminal/Command Prompt and enter the following command:</p>
+
+<p><code class="highlighter-rouge">nslookup ableton.com</code></p>
+
+<p>Your terminal will return the following info:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Server:  208.67.222.222
+
+Address: 208.67.222.222#53
+
+Non-authoritative answer:
+
+Name: ableton.com
+
+Address: 195.122.191.209
+</code></pre></div></div>
+
+<h3 id="the-results">The Results</h3>
+
+<p>In the above example, NSLookup returned us some valuable results. Let’s go line by line to understand the results:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+# This is the DNS server's IP address NSLookup talked to.
+Server:  208.67.222.222
+
+# This is the DNS server's IP address and port number NSLookup talked to.
+Address: 208.67.222.222#53
+
+# Whenever you see "Non-authoritative answer," that means that the 
+# DNS server gave us a cached answer.
+Non-authoritative answer:
+
+# This is the domain name of ableton.com.
+Name: ableton.com
+
+# This is the IP address of ableton.com.
+Address: 195.122.191.209
+</code></pre></div></div>
+
+<h3 id="non-authoratative-cached-huh">Non-Authoratative? Cached? Huh?</h3>
+<p>What’s the deal with this non-authoratative answer? Cached? What does it all mean?
+Whenever a DNS server is asked a question it has answered before, it will typically remember and store that answer for future use. In other words, the DNS server “cached” the answer.
+Therefore, whatever info appears before the words “Non-authoritative answer,” that means that the DNS server gave us a cached answer.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>NSLookup is useful for obtaining IP addresses for a given domain name. But it can do much more. There is an interactive mode, reverse IP address lookup, query type specifications, and more.</p>
+<h3 id="glossary">Glossary</h3>
+<ul>
+  <li><strong>IP Address</strong>: A set of numbers that are unique to each server. The IP address is used to display a website of a particular server.</li>
+  <li><strong>Cached</strong>: Think of caching a lot like remembering an answer to a question. If you’re asked the same question over and over you’ll eventually remember the answer and can simply recall the answer you gave the last time the question was asked. Servers can do this too and it’s called “caching.”</li>
+  <li><strong>Port Number</strong>: Imagine you want to talk to someone at a corporation about a problem you have with their product. Depending on who you talk to you, you’ll get a different response. Customer Retention department may provide you a coupon. Technical Support may provide you product support. Therefore, it’s important to know who you want to talk to. Just like with a corporation, when you talk to a server you’ll want to know exactly who to talk to. Port numbers help you do that. Think of an IP address representing a corporation and a port number representing the department that you want to talk to.</li>
+  <li><strong>DNS Query</strong>: This is the conversation that occurs between DNS servers. This conversation can range from asking about what’s the IP address for a given domain to what are all of the DNS records for a given IP address.</li>
+</ul>
+
+:ET

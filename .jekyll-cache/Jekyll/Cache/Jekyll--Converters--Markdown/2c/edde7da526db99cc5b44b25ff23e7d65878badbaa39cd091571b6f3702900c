@@ -1,0 +1,26 @@
+I"
+<h3 id="what-is-it">What is it?</h3>
+<p>DNS is the phonebook of the internet. Think of a person’s name in the phonebook as the website URL and the phone number as the IP address. See analogy below:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Phonebook = DNS
+Phone number = IP address
+Name of person = URL
+</code></pre></div></div>
+
+<h3 id="why-is-it-important">Why is it important?</h3>
+<p>The DNS is meant to help browsers find an IP address. Without an IP address, the browser won’t be able to display the website to you.</p>
+
+<h3 id="how-does-it-work">How does it work?</h3>
+<p>Whenever you enter a website into your browser, your browser contacts a DNS server. The browser asks the DNS server to find the IP address for a given URL (for example google.com). When the DNS server finds the IP address for that URL, it gives it to the browser. Once the browser has the IP address, it can access the website.</p>
+
+<h3 id="what-happens-if-we-didnt-have-the-dns">What happens if we didn’t have the DNS?</h3>
+<p>Without DNS, we would have to provide the browser with an IP address instead of a URL. For example, instead of <code class="highlighter-rouge">google.com</code> we would have to type in <code class="highlighter-rouge">64.233.172.0</code>. No one is going to remember all those numbers!</p>
+
+<h3 id="glossary">Glossary</h3>
+<ul>
+  <li><strong>DNS</strong>: Domain Name System. Think of it as the phonebook of the internet.</li>
+  <li><strong>IP Address</strong>: A set of numbers that are unique to each server. The IP address is used to display a website of a particular server.</li>
+  <li><strong>URL</strong>: Uniform Resource Locator. The web address of a website. It’s rememorable and what everyone uses to access a website.</li>
+</ul>
+
+:ET

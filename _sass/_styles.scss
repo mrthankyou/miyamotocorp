@@ -74,30 +74,27 @@ code {
     font-weight: bold;
 }
 
+.highlight-rouge {
+	border: solid 1px $grey-light;
+}
+
 .highlight {
     background: $black;
     padding: 12px;
+		padding-bottom: 0px;
     border-radius: 4px;
     margin-bottom: $lh;
     overflow-x: scroll;
 
+
     code {
-        color: $white;
+        color: $grey-medium;
         font-family: "Monaco", "Courier New", "Courier";
         font-size: .9em;
         .lineno {
             margin-right: $lh/2;
             color: $grey-light;
             line-height: 2em;
-        }
-        .nt {
-            color: #c85b5c;
-        }
-        .na {
-            color: #f0e687;
-        }
-        .s {
-            color: #87ceeb;
         }
     }
 }
@@ -189,10 +186,16 @@ header.site-header {
 }
 
 #bump .darken {
-      
+	.no-highlight-link {
+		&:hover, &:visited, &:active {
+			color: $black !important;
+		}
+	}
       a {
       color: $black;
       @include transit(all, .2s, ease-in-out);
+
+	
 
       &:hover {
         color: $link;
@@ -236,6 +239,9 @@ header.site-header hgroup {
       letter-spacing: 2px;
       text-transform: uppercase;
   }
+	h6 {
+		font-size: 11px;
+	}
   a {
       color: #fff;
       @include transit(all, .2s, ease);
@@ -316,7 +322,7 @@ header.site-header nav {
     
     // Header Stuff
     header {
-        margin: (2*$lh) 0 $lh 0;
+        margin: 0 0 $lh 0;
         hgroup {
             color: $black;
             position: relative;
@@ -355,14 +361,14 @@ header.site-header nav {
     display: block;
     margin: 0 auto;
     float: none;
-    padding-top: 140px;
+    padding-top: 90px;
     
     // Post Listing
     .post-list {
         list-style-type: none;
         list-style: none;
-        @include column(7);
-        @include push(2);
+        @include column(8);
+        @include push(1);
         display: block;
         float: none;
         
@@ -377,39 +383,8 @@ header.site-header nav {
             margin-bottom: $lh*2;
             position: relative;
             
-            a {
-                position: relative;
-                &:hover {
-                    @include transit;
-                }
-            }
-            
-            a:hover:before {
-                content:'...';
-                color: $grey-light;
-                font-family: $sans;
-                position: absolute;
-                margin-left: -70px;
-                font-size: 40px;
-                left: 0;
-                top: -20px;
-                text-align: center;
-                @include transit;
-            }
-            
-            a:before {
-                content:'\201c';
-                color: $grey-light;
-                position: absolute;
-                margin-left: -70px;
-                font-size: 60px;
-                z-index: 10;
-                top: -6px;
-                left: 0;
-                text-align: center;
-                @include transit;
-
-            }
+   
+    
             
             h1 {
                 font-size: $fs3;
@@ -608,105 +583,21 @@ header.site-header nav {
 
 /* Footer Stuff */
 .push {
-    height: $footerHeight/4 !important;
+    height: ($footerHeight/4 + 10) !important;
 }
 
 footer {
     width: 100%;
-    background: $black;
     height: $footerHeight;
     font-size: $fsp;
-    color: $white;
-    position: relative;
-        
-    // Contain that ish
-    section {
-        @include column(10);
-        @include row(10);
-        display: block;
-        margin: 0 auto;
-    }
-    
-    small {
-        font-size: ($fs6);
-        text-align: center;
-        display: block;
-        width: 100%;
-        position: absolute;
-        bottom: 8px;
-        font-family: $sans;
-        text-transform: uppercase;
-        color: transparentize($white, .9);
-        a {
-            color: transparentize($white, .7);
-        }
-    }
-    
-    .list-title {
-        margin-bottom: $lh/2;
-        border-bottom: 2px solid $link;
-        font-style: italic;
-        font-size: $fs4;
-    }
-    .prev-posts {
-        @include column(6,10);
-        max-width: 600px;
-        min-height: 250px;
-        padding-left: 5vw;
-        p {
-            padding-top: $lh*2;
-        }
-        li {
-            @include row(12);
-            margin-top: $lh/2;
-            .recent-title {
-                @include column(8,12);
-                font-style: italic;
-                a {
-                    &:hover {
-                        color: $white;
-                    }
-                }
-            }
-            span.date {
-                float: none;
-                color: transparentize($grey-light, .4);
-                @include column(4,12);
-                position: relative;
-                font-size: $fs5;
-                font-family: $sans;
-                text-transform: uppercase;
-                text-align: right;
-            }
-        }
-    }
-    
-    .social {
-        position: absolute;
-        top: 109px;
-        @include column(2,12);
-        right: 5vw;
-        font-style: italic;
-        a {
-            &:hover {
-                color: $white;
-            }
-        }
-        ul {
-            li {
-                margin-bottom: $lh/2;
-                &:last-child {
-                    margin-bottom: 0;
-                }
-            }
-        }
-    }
+    color: $black;
+    position: fixed;
+		bottom: 0px;
+		right: 5px;
+		text-align: right;
 }
 
-.disqus {
-    margin-top: $lh*3;
-}
-
+ 
 
 /* Tablet
    ========================================================================== */
@@ -793,11 +684,16 @@ footer {
     padding-top: 0;
   }
   
-  header.site-header hgroup h1 {
+  header.site-header hgroup h1, h2, h3, h4, h5 {
     margin-bottom: 0;
     font-size: $fsp;
   }
-  
+	
+  header.site-header hgroup h6 {
+    margin-bottom: 0;
+    font-size: 13px;
+  }
+	
   header.site-header hgroup {
     position: absolute;
     left: 7%;
@@ -908,5 +804,9 @@ small {
 }
 
 
+// Helper Classes
+.normal-font-style {
+	font-style: normal !important;
+}
 
 
