@@ -16,7 +16,7 @@ tools:
   software:       "git"
 
 site:
-	url: https://miyamotocorp.com
+  url: https://miyamotocorp.com
 
 # Links to include in top navigation
 # For external links add external: true
