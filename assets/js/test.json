@@ -1,0 +1,71 @@
+{
+ "data": [
+   {
+     "$schema": "http://json-schema.org/schema#", 
+     "description": "Schema for User", 
+     "id": "https://api.pinterest.com/v3/schemas/prelay/User.json#", 
+     "properties": {
+       "account_type": {
+         "required": false, 
+         "type": "string"
+       }, 
+       "bio": {
+         "required": false, 
+         "type": "string"
+       }, 
+       "counts": {
+         "properties": {
+           "boards": {
+             "type": "integer"
+           }, 
+           "followers": {
+             "type": "integer"
+           }, 
+           "following": {
+             "type": "integer"
+           }, 
+           "pins": {
+             "type": "integer"
+           }
+         }, 
+         "required": false, 
+         "type": "object"
+       }, 
+       "created_at": {
+         "format": "date-time", 
+         "required": false, 
+         "type": "string"
+       }, 
+       "first_name": {
+         "required": true, 
+         "type": "string"
+       }, 
+       "id": {
+         "required": true, 
+         "type": "string"
+       }, 
+       "image": {
+         "format": "uri", 
+         "required": false, 
+         "type": "string"
+       }, 
+       "last_name": {
+         "required": true, 
+         "type": "string"
+       }, 
+       "url": {
+         "format": "uri", 
+         "required": true, 
+         "type": "string"
+       }, 
+       "username": {
+         "required": false, 
+         "type": "string"
+       }
+     }, 
+     "title": "User", 
+     "type": "object"
+   }, 
+   null
+ ]
+}
