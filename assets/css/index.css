@@ -1,0 +1,44 @@
+@font-face { font-family: roboto-regular;
+  src: url('../fonts/Roboto/Roboto-Medium.ttf');
+}
+
+body {
+  background-color: black;
+  color: #c7c7c7;
+  font-family: roboto-regular;
+  font-size: 20px;
+  padding-top: 20px;
+}
+
+p {
+  font-size: 20px;
+}
+
+h2 {
+  margin-bottom: 0px;
+  color: #03A062;
+}
+
+
+
+.quote {
+  font-size: 19px;
+}
+
+
+/* colors */
+/* colors */
+/* colors */
+/* colors */
+
+.green {
+  color: #03A062;
+}
+
+.white {
+  color: white;
+}
+
+.gray {
+  color: #c7c7c7;
+}
