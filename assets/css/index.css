@@ -47,22 +47,10 @@ h2 {
 /* footer */
 /* footer */
 /* footer */
-html {
-  position: relative;
-  min-height: 100%;
+.content {
+  min-height: calc(100vh - 40px);
 }
 
-.content { 
-  box-sizing: border-box;
-  text-align: center;
-}
-
-footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 100px;
-  width: 100%;
-  text-align: center;
-  line-height:100px;
+.footer {
+  height: 40px;
 }
