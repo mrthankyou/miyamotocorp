@@ -7,8 +7,6 @@ body {
   color: #c7c7c7;
   font-family: roboto-regular;
   font-size: 20px;
-  padding-top: 20px;
-  margin: 0 0 100px; 
 }
 
 p {
@@ -22,6 +20,12 @@ h2 {
 
 .quote {
   font-size: 19px;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  text-decoration: underline;
 }
 
 
@@ -30,8 +34,8 @@ h2 {
 /* colors */
 /* colors */
 
-.green {
-  color: #03A062;
+.red {
+  color: #8B0000;
 }
 
 .white {
@@ -48,9 +52,9 @@ h2 {
 /* footer */
 /* footer */
 .content {
-  min-height: calc(100vh - 40px);
+  min-height: calc(100vh - 60px);
 }
 
 .footer {
-  height: 40px;
+  height: 60px;
 }
