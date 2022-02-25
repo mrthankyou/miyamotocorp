@@ -42,3 +42,14 @@ h2 {
 .gray {
   color: #c7c7c7;
 }
+
+
+/* footer */
+.footer-push {
+  height: auto;
+}
+
+#footer {
+  /* Placeholder footer styles */
+  text-align: center;
+}
