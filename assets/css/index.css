@@ -8,6 +8,7 @@ body {
   font-family: roboto-regular;
   font-size: 20px;
   padding-top: 20px;
+  margin: 0 0 100px; 
 }
 
 p {
@@ -18,8 +19,6 @@ h2 {
   margin-bottom: 0px;
   color: #03A062;
 }
-
-
 
 .quote {
   font-size: 19px;
@@ -45,11 +44,25 @@ h2 {
 
 
 /* footer */
-.footer-push {
-  height: auto;
+/* footer */
+/* footer */
+/* footer */
+html {
+  position: relative;
+  min-height: 100%;
 }
 
-#footer {
-  /* Placeholder footer styles */
+.content { 
+  box-sizing: border-box;
   text-align: center;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  text-align: center;
+  line-height:100px;
 }
