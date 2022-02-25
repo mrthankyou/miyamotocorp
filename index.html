@@ -12,23 +12,31 @@
   <link rel="stylesheet" href="./assets/css/index.css">
 
   <body>
+    <div id="timer"></div>
     <section role="main"> 
       <div class="container">
         <div class="content">
           <h1 class="title">Miyamoto Corp</h1>
-          <hr>
+          <br>
+
+          <br>
           <div class="gray">
-            <span class="red">Current projects:</span>
-            <ul>
+            <h4 class="red">
+              Current projects:
+            </h4>
+            <ol>
               <li>
                 EP - Return To Fiction
               </li>          
               <li>
                 Auditing multiple Solidity projects          
               </li>          
-            </ul>
+            </ol>
+
+            <br>
+            <br>
+            <br>
           </div>
-          <hr>
 
         </div>
 
@@ -40,6 +48,28 @@
       </div>
     </section>
   
+    <script type="text/javascript">
+      function getTime() {
+        const current = new Date();
+        const time = current.toLocaleTimeString("en-US", {
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          hour12: false
+        });
+        return time;
+      }
 
+      function setTime() {
+        document.getElementById("timer").textContent = getTime();
+        setTimer()
+      }
+
+      function setTimer() {
+        setTimeout(() => {setTime()}, 1000);
+      }
+
+      setTime();
+    </script>
   </body>
 </html>
